@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        validate: (value) => validator.isEmail(value)
+        validate:[ (value) => validator.isEmail(value),"plz Enter valid Email"]
     },
     mobile: {
         type: String,
